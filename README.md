@@ -103,11 +103,11 @@ python app.py
 
 ## 🖥 Example Screenshots
 
-*(Add screenshots here of `index.html` and `report.html`)*
+
 
 ---
 
-
+https://github.com/AkashSinghrajpoot/pridictive_pulse/blob/main/Untitled%20design.jpg
 
 ---
 
