@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Pressure Stage Prediction</title>
+    <style>
+        body { font-family: Arial; background-color: #f4f4f4; padding: 20px; }
+        .container { background: white; padding: 20px; border-radius: 10px; width: 400px; margin: auto; }
+        select, input { width: 100%; padding: 8px; margin: 8px 0; }
+        button { background: #28a745; color: white; padding: 10px; border: none; cursor: pointer; width: 100%; }
+        button:hover { background: #218838; }
+        h2 { text-align: center; }
+        .result { text-align: center; font-weight: bold; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Blood Pressure Stage Prediction</h2>
+        <form action="/predict" method="post">
+            
+            <label>Gender:</label>
+            <select name="Gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label>Age Range:</label>
+            <select name="Age" required>
+                <option value="20-30">20-30</option>
+                <option value="31-40">31-40</option>
+                <option value="41-50">41-50</option>
+                <option value="51-60">51-60</option>
+                <option value="61-70">61-70</option>
+            </select>
+
+            <label>Patient:</label>
+            <select name="Patient" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>Severity:</label>
+            <select name="Severity" required>
+                <option value="mild">Mild</option>
+                <option value="moderate">Moderate</option>
+                <option value="severe">Severe</option>
+            </select>
+
+            <label>Breath Shortness:</label>
+            <select name="BreathShortness" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>Visual Changes:</label>
+            <select name="VisualChanges" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>Nose Bleeding:</label>
+            <select name="NoseBleeding" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>Systolic Range:</label>
+            <select name="Systolic" required>
+                <option value="110-120">110-120</option>
+                <option value="121-130">121-130</option>
+                <option value="131-140">131-140</option>
+                <option value="141-160">141-160</option>
+            </select>
+
+            <label>Diastolic Range:</label>
+            <select name="Diastolic" required>
+                <option value="80-90">80-90</option>
+                <option value="91-100">91-100</option>
+                <option value="101-110">101-110</option>
+            </select>
+
+            <label>Controlled Diet:</label>
+            <select name="ControlledDiet" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
