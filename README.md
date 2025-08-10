@@ -84,7 +84,7 @@ python app.py
 
 ## 🧠 Machine Learning Model
 
-* Model: RandomForestClassifier (or any trained classifier)
+* Model: RandomForestClassifier 
 * Training Data: Historical medical records dataset
 * Features:
 
